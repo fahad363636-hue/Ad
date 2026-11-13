@@ -1,4 +1,7 @@
 Package: com.mohamedjj.mjvirtualcamera
+Depiction: https://mjrepo.pages.dev/depictions/camvortex/
+SileoDepiction: https://mjrepo.pages.dev/depictions/camvortex/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/camvortex/
 Name: CamVortex Pro
 Description: System-wide virtual camera replacement for all applications.
 Maintainer: Mohamedjj
@@ -16,6 +19,9 @@ SHA256: e8ac4c9dbdb01b12fdcbcfe0bfdb6d445c6fdd9fe06b184c48a321b621ebd540
 SHA512: c52a2a734a542ee3e5d89a563f62f463fc8514e37f3af07ed9e9b20c56c365882a422c8803b72fa6b67be9c04ea286deae5b2a73ad22a57e658c9413715089f7
 
 Author: Mohamedjj <fahad363636@gmail.com>
+Depiction: https://mjrepo.pages.dev/depictions/facebook/
+SileoDepiction: https://mjrepo.pages.dev/depictions/facebook/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/facebook/
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Name: Facebook LiveCam
 Package: com.mohamedjj.livecam
@@ -25,8 +31,6 @@ Installed-Size: 1015
 Version: 0.3.10
 Architecture: iphoneos-arm64
 Description: Use local video as Facebook LIVE camera source.
-Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=facebooklivecamDp
-Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=facebooklivecamDp
 Sponsor: thebigboss.org <http://thebigboss.org>
 dev: mohamedjj
 Tag: purpose::extension
@@ -39,6 +43,9 @@ SHA256: ef2e96434e92b5eb5c86159ceae73f9bea5435ab1fb2135cb5e4167949559a36
 SHA512: d282999782da55d8d6d9d95f76c609cc2a249807b68c05d7d28c3e71c148be77ca35b8340d4ca0fba124d0466b9ae11cda8444f4416d111995e4cec2932b5531
 
 Author: Mohamedjj <fahad363636@gmail.com>
+Depiction: https://mjrepo.pages.dev/depictions/instagram/
+SileoDepiction: https://mjrepo.pages.dev/depictions/instagram/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/instagram/
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Name: InstaLiveCam
 Package: com.mohamedjj.instalivecam
@@ -48,8 +55,6 @@ Installed-Size: 2695
 Version: 0.2.11
 Architecture: iphoneos-arm64
 Description: Use a selected local video as the Instagram LIVE camera source.
-Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=instalivecamDp
-Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=instalivecamDp
 Sponsor: thebigboss.org <http://thebigboss.org>
 dev: mohamedjj
 Tag: purpose::extension
@@ -62,6 +67,9 @@ SHA256: 38816c1ae07c0e466bb0a4cadd3c29ed2cc62a029dbe6248703cc81ca94cf4bb
 SHA512: 426db53e0a1cffea3b6d9f5a846ba8be9eb6bad2559eac40aaefba5bd59bbcf4c58726e80f5b266943e040fbb3ce81806b82013d6af6ea209f25b8a58814243e
 
 Author: Mohamedjj <fahad363636@gmail.com>
+Depiction: https://mjrepo.pages.dev/depictions/messenger/
+SileoDepiction: https://mjrepo.pages.dev/depictions/messenger/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/messenger/
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Name: MessengerLiveCam
 Package: com.mohamedjj.messengerlivecam
@@ -71,8 +79,6 @@ Installed-Size: 2821
 Version: 0.4.7
 Architecture: iphoneos-arm64
 Description: Use selected local video as Messenger camera source
-Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=messengerlivecamDp
-Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=messengerlivecamDp
 Sponsor: thebigboss.org <http://thebigboss.org>
 dev: mohamedjj
 Tag: purpose::extension
@@ -85,6 +91,9 @@ SHA256: a4d2fd7be412e51fb47e0c179a3ef00aa7918b6f80161c77527507b3d639952e
 SHA512: 9ff982f5a999fc7060977764f666a0a7e2960d31ee3a250ac604a36fdfc8dcf3d3c95a79683cf1ca921d81b4094ce78ae0756b9e76d265d0f22d6fc9eea0ef1f
 
 Author: Mohamedjj <fahad363636@gmail.com>
+Depiction: https://mjrepo.pages.dev/depictions/snapchat/
+SileoDepiction: https://mjrepo.pages.dev/depictions/snapchat/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/snapchat/
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Name: SnapLiveCam
 Package: com.mohamedjj.snaplivecam
@@ -94,8 +103,6 @@ Installed-Size: 2026
 Version: 0.3.10
 Architecture: iphoneos-arm64
 Description: Select video source for Snapchat Live video calls
-Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=snaplivecamDp
-Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=snaplivecamDp
 Sponsor: thebigboss.org <http://thebigboss.org>
 dev: mohamedjj
 Tag: purpose::extension
@@ -108,6 +115,9 @@ SHA256: bdb7de1c71f9574dbf31befbd4300900f049c5911b2a2da36e56d99e978fb09d
 SHA512: ddabf196bb6dbe8f43f46ba043c5c783dcff64bae20dca1401d4d554ac74dbe830212da51c1215c4ae0dc736f4dc52af060c83ecd61c1acc28d7be296df7cba8
 
 Author: Mohamedjj <fahad363636@gmail.com>
+Depiction: https://mjrepo.pages.dev/depictions/tiktok/
+SileoDepiction: https://mjrepo.pages.dev/depictions/tiktok/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/tiktok/
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Name: TikTokFakeLiveCam
 Package: com.mohamedjj.tiktokfakelivecam
@@ -117,8 +127,6 @@ Installed-Size: 2441
 Version: 1.0.7
 Architecture: iphoneos-arm64
 Description: TikTok LIVE video camera replacement
-Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=tiktokfakelivecamDp
-Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=tiktokfakelivecamDp
 Sponsor: thebigboss.org <http://thebigboss.org>
 dev: mohamedjj
 Tag: purpose::extension
@@ -131,6 +139,9 @@ SHA256: b6b9d59dfcf439be849f78dee24d3f47aefd980aa81b4b33ab6b99b4963b1092
 SHA512: 7914a5c377ab44ce118b9d0f23a1351f8c9c49e509e3403d87f84eea8a16eaa264e3cbd1969f8983096c25204e54f0b2681c8304559acd2eb8155d3a02f67a58
 
 Author: Mohamedjj <fahad363636@gmail.com>
+Depiction: https://mjrepo.pages.dev/depictions/whatsapp/
+SileoDepiction: https://mjrepo.pages.dev/depictions/whatsapp/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/whatsapp/
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Name: WhatsAppLiveCam
 Package: com.mohamedjj.whatsapplivecam
@@ -140,8 +151,6 @@ Installed-Size: 1400
 Version: 0.3.29
 Architecture: iphoneos-arm64
 Description: WhatsApp Live video camera replacement
-Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=whatsapplivecamDp
-Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=whatsapplivecamDp
 Sponsor: thebigboss.org <http://thebigboss.org>
 dev: mohamedjj
 Tag: purpose::extension
@@ -154,6 +163,9 @@ SHA256: 53010a827ec2831032613701dde9112550df17316472d819796411b7ad7a1c78
 SHA512: 843d5344bd7b0139f65ccaffe0ae17d82d5db8f225f38ef54bfad1592d88498b45620d767e3e44fc34b9cfacc8059c4125f06ef84debfefac50533b301516659
 
 Author: Mohamedjj <fahad363636@gmail.com>
+Depiction: https://mjrepo.pages.dev/depictions/youtube/
+SileoDepiction: https://mjrepo.pages.dev/depictions/youtube/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/youtube/
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Name: YouTubeLiveCam
 Package: com.mohamedjj.youtubelivecam
@@ -163,8 +175,6 @@ Installed-Size: 1866
 Version: 0.4.9
 Architecture: iphoneos-arm64
 Description: Use selected local video as YouTube camera source
-Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=tiklivecamDp
-Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=tiklivecamDp
 Sponsor: thebigboss.org <http://thebigboss.org>
 dev: mohamedjj
 Tag: purpose::extension
@@ -177,6 +187,9 @@ SHA256: 718708cf32f1d3c6a4e4ff850c308fd7a18f04cd5e5953e3b64cad98abfacb30
 SHA512: 4f5e829e2073051ad65e3727b31130d8170efcd3285f950799964819d4ea3588db5366b62c859903b0236bb13f006f91d1bdb9a92319da33243fa8e94e824340
 
 Package: com.mohamedjj.fakegpssystemwide
+Depiction: https://mjrepo.pages.dev/depictions/fakegps/
+SileoDepiction: https://mjrepo.pages.dev/depictions/fakegps/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/fakegps/
 Name: FakeGPS System-Wide
 Version: 1.2.23
 Architecture: iphoneos-arm64
@@ -192,10 +205,10 @@ SHA256: ae6a36698d3e3e23f4e9c39f581bcdfcc45edfe4fb31ee25ca27b64237541c9e
 SHA512: f4dff324dcfd286eca460201bb28bd589e30f452a14995e6618f90ac15ad526ffa43783ad4bcf290169fe219a1502268f396043e99915d103dad34c6ec4d4911
 
 Package: com.mohamedjj.settingshide
-Name: Hide Anything in Settings
 Depiction: https://mjrepo.pages.dev/depictions/settingshide/
 SileoDepiction: https://mjrepo.pages.dev/depictions/settingshide/depiction.json
 Homepage: https://mjrepo.pages.dev/depictions/settingshide/
+Name: Hide Anything in Settings
 Description: Hide and restore selected rows inside iOS Settings.
 Maintainer: Mohamedjj
 Author: Mohamedjj
@@ -212,6 +225,9 @@ SHA256: 33e6cce38b1d0e2fda342c9d1de616032d595107928ccdfe175b6091b1dc4387
 SHA512: fb7bc21b1d2fa3282f4509d7c0f66fb7eb1ea342925db979d9f352d53551f92b4be4063366ae2cdc1e98a1831d0090f9bb2934223251d9c796603c441f9f250b
 
 Package: com.mohamedjj.theftguard
+Depiction: https://mjrepo.pages.dev/depictions/guardian/
+SileoDepiction: https://mjrepo.pages.dev/depictions/guardian/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/guardian/
 Name: The Guardian
 Description: Security alerts for incorrect passcode attempts on your own iPhone.
  Captures photos or video, sounds an alarm and includes location in owner alerts.
@@ -222,7 +238,6 @@ Maintainer: Mohamedjj
 Author: Mohamedjj
 Section: Tweaks
 Depends: mobilesubstrate, preferenceloader, ldid, uikittools (>= 2.1.1)
-Homepage: https://fahadventure034.gumroad.com/l/xifsgj
 Architecture: iphoneos-arm64
 Version: 4.3.2
 Installed-Size: 1160
@@ -232,4 +247,3 @@ MD5sum: 24e49cc88c92341f41c7669abea35c0d
 SHA1: 43e6bf83572ef52976f76be9757ad53592da4e31
 SHA256: 38d23bf54290ffa7c2c430bf9e585c4b1d054c2f3e2839577241a5c16e230cde
 SHA512: 03c04f6f3ed3e9e0d58ba6928d125ece0f0a528dd21d9d212d5473c1dca30afd6c30dde42cf37d3187fa2f3cc2046fa5e45c6e52b35ff776dacfea23b6996d21
-
