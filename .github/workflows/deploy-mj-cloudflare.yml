@@ -7,7 +7,7 @@ on:
       - '.github/workflows/deploy-mj-cloudflare.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: mjrepo-cloudflare-deploy
   cancel-in-progress: true
@@ -16,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Resolve existing Cloudflare account
+      - name: Deploy using existing Cloudflare token
+        id: publish
+        continue-on-error: true
         env:
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -24,17 +26,47 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "$CF_API_TOKEN" ]; then
-            echo "::error::Missing existing CLOUDFLARE_API_TOKEN secret in this GitHub repository. Add the token already used for MJ Repo."
+            echo "missing_token" > /tmp/mj-deploy-reason
+            echo "::error::CLOUDFLARE_API_TOKEN is not available in repository Actions secrets."
             exit 1
           fi
           if [ -z "$CF_ACCOUNT_ID" ]; then
-            echo "Looking up Cloudflare account ID for existing Pages project mjrepo"
-            result=$(curl -fsS -H "Authorization: Bearer $CF_API_TOKEN" -H 'Content-Type: application/json' 'https://api.cloudflare.com/client/v4/accounts?per_page=100')
-            CF_ACCOUNT_ID=$(printf '%s' "$result" | python3 -c 'import json,sys; d=json.load(sys.stdin); a=d.get("result") or []; assert d.get("success") and len(a)==1, "Cannot uniquely detect account. Add CLOUDFLARE_ACCOUNT_ID secret."; print(a[0]["id"])')
+            response=$(curl --fail-with-body -sS -H "Authorization: Bearer $CF_API_TOKEN" "https://api.cloudflare.com/client/v4/accounts?per_page=100") || {
+              echo "account_lookup_failed" > /tmp/mj-deploy-reason
+              exit 1
+            }
+            CF_ACCOUNT_ID=$(printf '%s' "$response" | python3 -c 'import sys,json; r=json.load(sys.stdin); a=r.get("result") or []; assert r.get("success") and len(a)==1, "Expected one accessible Cloudflare account"; print(a[0]["id"])') || {
+              echo "account_lookup_ambiguous" > /tmp/mj-deploy-reason
+              exit 1
+            }
           fi
           echo "::add-mask::$CF_ACCOUNT_ID"
-          echo "CLOUDFLARE_ACCOUNT_ID=$CF_ACCOUNT_ID" >> "$GITHUB_ENV"
-      - name: Deploy to existing mjrepo Cloudflare Pages project
-        run: npx --yes wrangler@4 pages deploy mj --project-name=mjrepo --branch=main --commit-dirty=true
+          export CLOUDFLARE_API_TOKEN="$CF_API_TOKEN"
+          export CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT_ID"
+          npx --yes wrangler@4 pages deploy mj --project-name=mjrepo --branch=main --commit-dirty=true || {
+            echo "wrangler_deploy_failed" > /tmp/mj-deploy-reason
+            exit 1
+          }
+          echo "success" > /tmp/mj-deploy-reason
+      - name: Save deployment status to GitHub for inspection
+        if: always()
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PUBLISH_RESULT: ${{ steps.publish.outcome }}
+          GITHUB_SHA_CURRENT: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          status=Path('/tmp/mj-deploy-reason').read_text().strip() if Path('/tmp/mj-deploy-reason').exists() else 'step_not_started'
+          Path('.github/mj-deploy-status.json').write_text(json.dumps({'result':os.environ['PUBLISH_RESULT'],'reason':status,'trigger_commit':os.environ['GITHUB_SHA_CURRENT']},indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .github/mj-deploy-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record MJ Repo Cloudflare deployment status'
+            git push
+          fi
+      - name: Fail workflow if deployment failed
+        if: steps.publish.outcome != 'success'
+        run: exit 1
