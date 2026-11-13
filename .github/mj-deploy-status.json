@@ -1,0 +1,5 @@
+{
+  "result": "failure",
+  "reason": "missing_token",
+  "trigger_commit": "d8326fd613b9b047252ed8427d8a195e4007331a"
+}
