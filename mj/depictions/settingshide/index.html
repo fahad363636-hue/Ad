@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hide Anything in Settings</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f1220;
+      --card: #171b2f;
+      --text: #f4f7ff;
+      --muted: #c6d0ea;
+      --accent: #6a7cff;
+      --accent2: #9b5cff;
+      --line: rgba(255,255,255,.12);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f4f5fb;
+        --card: #ffffff;
+        --text: #101322;
+        --muted: #50576d;
+        --accent: #4b63ff;
+        --accent2: #7b57ff;
+        --line: rgba(0,0,0,.08);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background: linear-gradient(180deg,var(--bg),#0a0d18 120%);
+      color: var(--text);
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 20px; }
+    .hero {
+      background: linear-gradient(135deg,var(--accent),var(--accent2));
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.22);
+    }
+    .hero h1 { margin: 0 0 8px; font-size: 34px; }
+    .hero p { margin: 0; opacity: .95; font-size: 17px; }
+    .badges { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+    .badge {
+      background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.22);
+      padding: 8px 12px; border-radius: 999px; font-size: 13px;
+    }
+    .section { margin-top: 22px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.12);
+    }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin: 8px 0; color: var(--muted); }
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 14px;
+    }
+    figure {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    figure img { width: 100%; display: block; }
+    figcaption { padding: 12px 14px; color: var(--muted); font-size: 14px; }
+    .foot { color: var(--muted); font-size: 13px; margin-top: 18px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Hide Anything in Settings</h1>
+      <p>Hide selected rows from the iOS Settings app, then restore them at any time.</p>
+      <div class="badges">
+        <div class="badge">Rootless</div>
+        <div class="badge">iOS 15–16</div>
+        <div class="badge">Sileo / Zebra / Cydia</div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Features</h2>
+      <ul>
+        <li>Hide specific rows and sections inside the main Settings screen.</li>
+        <li>Simple checklist interface with visible checkmarks for hidden rows.</li>
+        <li>Quick “Restore All” action to bring every hidden row back.</li>
+        <li>Designed for rootless jailbreak setups.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Screenshots</h2>
+      <div class="shots">
+        <figure>
+          <img src="1-main.png" alt="Main Settings screen with rows visible" />
+          <figcaption>Main Settings screen before hiding rows.</figcaption>
+        </figure>
+        <figure>
+          <img src="2-popup.png" alt="Hide Settings Rows interface" />
+          <figcaption>Choose which rows to hide and restore all rows when needed.</figcaption>
+        </figure>
+        <figure>
+          <img src="3-hidden.png" alt="Settings after rows have been hidden" />
+          <figcaption>Clean Settings screen after hiding the selected rows.</figcaption>
+        </figure>
+      </div>
+      <div class="foot">Developer: Mohamedjj</div>
+    </section>
+  </div>
+</body>
+</html>

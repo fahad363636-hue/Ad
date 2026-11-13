@@ -1,0 +1,66 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tintColor": "#5266DC",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "Hide Anything in Settings"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Hide selected rows from iOS Settings and bring them back whenever you need. Designed for rootless iOS jailbreaks.\n\n- Pick the Settings rows to hide.\n- Review hidden rows using clear checkmarks.\n- Restore all hidden rows in one action."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Screenshots"
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 14,
+          "itemSize": {
+            "x": 184,
+            "y": 398
+          },
+          "screenshots": [
+            {
+              "url": "https://mjrepo.pages.dev/depictions/settingshide/2-popup.png",
+              "accessibilityText": "Screenshot of SettingsHide selection panel and Restore All option"
+            },
+            {
+              "url": "https://mjrepo.pages.dev/depictions/settingshide/3-hidden.png",
+              "accessibilityText": "Settings screen after hiding selected options"
+            },
+            {
+              "url": "https://mjrepo.pages.dev/depictions/settingshide/1-main.png",
+              "accessibilityText": "Settings screen showing the tweak entry"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Information"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "0.2.9"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Mohamedjj"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Compatibility",
+          "text": "Rootless iOS 15 and 16"
+        }
+      ]
+    }
+  ]
+}

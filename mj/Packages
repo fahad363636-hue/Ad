@@ -193,6 +193,9 @@ SHA512: f4dff324dcfd286eca460201bb28bd589e30f452a14995e6618f90ac15ad526ffa43783a
 
 Package: com.mohamedjj.settingshide
 Name: Hide Anything in Settings
+Depiction: https://mjrepo.pages.dev/depictions/settingshide/
+SileoDepiction: https://mjrepo.pages.dev/depictions/settingshide/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/settingshide/
 Description: Hide and restore selected rows inside iOS Settings.
 Maintainer: Mohamedjj
 Author: Mohamedjj
