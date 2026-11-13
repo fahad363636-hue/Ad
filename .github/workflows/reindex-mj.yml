@@ -1,0 +1,51 @@
+name: Rebuild MJ Repo indexes
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'mj/Packages'
+      - '.github/workflows/reindex-mj.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  reindex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install compression tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq zstd
+      - name: Generate APT indexes and Release
+        run: |
+          python3 - <<'PY'
+          import hashlib, gzip, bz2, lzma, subprocess
+          from pathlib import Path
+          from datetime import datetime, timezone
+          repo=Path('mj')
+          data=(repo/'Packages').read_bytes()
+          with (repo/'Packages.gz').open('wb') as fh:
+              with gzip.GzipFile(filename='',mode='wb',fileobj=fh,mtime=0) as z:
+                  z.write(data)
+          (repo/'Packages.bz2').write_bytes(bz2.compress(data))
+          (repo/'Packages.xz').write_bytes(lzma.compress(data, format=lzma.FORMAT_XZ))
+          subprocess.run(['zstd','-q','-f','-19','-o',str(repo/'Packages.zst'),str(repo/'Packages')],check=True)
+          names=['Packages','Packages.gz','Packages.bz2','Packages.xz','Packages.zst']
+          release=['Origin: MJ Repo','Label: MJ Repo','Suite: stable','Codename: ios','Version: 1.0','Architectures: iphoneos-arm64','Components: main','Description: Mohamedjj licensed rootless iOS packages', 'Date: '+datetime.now(timezone.utc).strftime('%a, %d %b %Y %H:%M:%S GMT')]
+          for name,algo in [('MD5Sum','md5'),('SHA256','sha256')]:
+              release.append(name+':')
+              for filename in names:
+                  b=(repo/filename).read_bytes()
+                  release.append(' '+hashlib.new(algo,b).hexdigest()+' '+str(len(b))+' '+filename)
+          (repo/'Release').write_text('\n'.join(release)+'\n')
+          PY
+      - name: Commit refreshed APT indexes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mj/Packages.gz mj/Packages.bz2 mj/Packages.xz mj/Packages.zst mj/Release
+          if ! git diff --cached --quiet; then
+            git commit -m 'Regenerate MJ Repo compressed indexes and Release'
+            git push
+          fi
