@@ -1,0 +1,48 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tintColor": "#45A7F8",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "PhotoZero"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Hide photos instantly by swiping down twice in Albums. Photos disappear immediately without refreshing or closing the Photos app. Swipe twice again to restore visibility. PhotoZero does not delete your photos. This experimental rootless tweak may not conceal every cached image or third-party picker."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Screenshot"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Screenshot of the Albums view with photos hidden."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Information"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.2.2"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Rootless",
+          "text": "iOS 15 and later on compatible devices"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "MJ"
+        }
+      ]
+    }
+  ]
+}

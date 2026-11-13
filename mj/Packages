@@ -247,3 +247,26 @@ MD5sum: 24e49cc88c92341f41c7669abea35c0d
 SHA1: 43e6bf83572ef52976f76be9757ad53592da4e31
 SHA256: 38d23bf54290ffa7c2c430bf9e585c4b1d054c2f3e2839577241a5c16e230cde
 SHA512: 03c04f6f3ed3e9e0d58ba6928d125ece0f0a528dd21d9d212d5473c1dca30afd6c30dde42cf37d3187fa2f3cc2046fa5e45c6e52b35ff776dacfea23b6996d21
+
+Package: com.mj.photozero
+Name: PhotoZero
+Version: 1.2.2
+Architecture: iphoneos-arm64
+Section: Tweaks
+Maintainer: MJ
+Author: MJ
+Depends: mobilesubstrate, firmware (>= 15.0), preferenceloader
+Description: Instantly hide photos and albums by swiping down twice in the Photos app without refreshing, closing or reopening it.
+ Photos remain stored on the device and visibility can be restored with the same gesture.
+ Experimental Photos interface filtering for compatible rootless jailbroken devices.
+Depiction: https://mjrepo.pages.dev/depictions/photozero/
+SileoDepiction: https://mjrepo.pages.dev/depictions/photozero/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/photozero/
+Filename: ./debs/com.mj.photozero_1.2.2_iphoneos-arm64.deb
+Size: 32340
+Installed-Size: 588
+MD5sum: feedff8ab4eb9fa2e72a772416e88063
+SHA1: 488ca69b0e5045bde5740e3d2aa6f2bf9d2bbfb0
+SHA256: 36bd8329d56af027388dbfb086d142f8885cc357057afc4ea0b19b736058d884
+SHA512: b0a0eddc2f1b7ae16ff0272d11e7f2478f12955ea8c488e7577605d7dca6a3566e35cae06d196d08079fc92b57418df8294173c415adac7dcf33dfb47f1af277
+
