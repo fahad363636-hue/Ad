@@ -63,7 +63,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Supported iOS",
-          "text": "Rootless iOS 15–16"
+          "text": "Rootless iOS 15–18"
         }
       ]
     }
