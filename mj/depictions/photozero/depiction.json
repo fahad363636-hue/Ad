@@ -20,8 +20,13 @@
           "title": "Screenshot"
         },
         {
-          "class": "DepictionMarkdownView",
-          "markdown": "Screenshot of the Albums view with photos hidden."
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/photozero/screenshot.png",
+          "width": 270,
+          "height": 585,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
         },
         {
           "class": "DepictionHeaderView",
