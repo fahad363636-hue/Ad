@@ -62,12 +62,8 @@
         },
         {
           "class": "DepictionTableTextView",
-          "title": "Compatibility target",
-          "text": "Rootless iOS 15–18"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "**Published package note:** The current 0.2.9 DEB still declares `firmware (<< 17.0)`. iOS 17 and 18 require an updated, tested build; editing this description does not change the package requirement."
+          "title": "Supported iOS",
+          "text": "Rootless iOS 15–16"
         }
       ]
     }
