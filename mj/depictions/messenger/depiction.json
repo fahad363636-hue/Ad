@@ -1,0 +1,19 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionStackView",
+  "tintColor": "#5266DC",
+  "views": [
+    {
+      "class": "DepictionHeaderView",
+      "title": "MessengerLiveCam"
+    },
+    {
+      "class": "DepictionMarkdownView",
+      "markdown": "**Rootless iOS 15–18**"
+    },
+    {
+      "class": "DepictionMarkdownView",
+      "markdown": "Developed by Mohamedjj."
+    }
+  ]
+}
