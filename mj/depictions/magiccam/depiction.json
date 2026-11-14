@@ -80,7 +80,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**KFS** camera-input illustration: MagicCam can provide user-selected pictures or videos only in compatible camera interfaces. **Illustrative example, not a tested KFS screenshot.**"
+          "markdown": "**KFS support:** MagicCam supports selected photos and videos as camera input in KFS. Successfully tested by the developer."
         },
         {
           "class": "DepictionHeaderView",
@@ -88,7 +88,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Camera source substitution for compatible browser camera requests. **Browser examples are shown on the full web page.**"
+          "markdown": "**Safari & Google Chrome support:** Use selected videos and pictures for browser camera requests."
         },
         {
           "class": "DepictionImageView",
@@ -114,7 +114,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**MagicCam — كاميرا افتراضية على مستوى النظام**\n\n1. **كاميرا افتراضية على مستوى النظام:** اختيار فيديو أو صورة محفوظة كمصدر بديل للكاميرا في التطبيقات المتوافقة.\n\n2. **البث المباشر على منصات التواصل:** استخدام فيديوهات من الألبوم أثناء البث المباشر في منصات التواصل المدعومة.\n\n3. **دعم المتصفحات:** استخدام مصدر الكاميرا الافتراضية داخل واجهات التصوير المتوافقة في Safari وGoogle Chrome.\n\n4. **نماذج الكاميرا وموقع KFS:** اختيار صور أو فيديوهات في واجهات التصوير المتوافقة، بما فيها النماذج التي تستخدم الكاميرا في موقع KFS.\n\n5. **ميزة Fake Picture:** اختيار صورة من الألبوم لتُستخدم في طلبات التقاط الصور المتوافقة، للخصوصية واختبار التطبيقات.\n\n6. **مكالمات الفيديو:** عرض فيديو مختار في مكالمات الفيديو لدى التطبيقات المدعومة.\n\n7. **تبديل مصدر الكاميرا:** الانتقال بين الكاميرا الأصلية والفيديو المسجل والصورة المختارة.\n\n8. **دعم Rootless:** مصممة لأجهزة الآيفون التي تدعم جيلبريك Rootless."
+          "markdown": "**MagicCam — كاميرا افتراضية على مستوى النظام**\n\n1. **كاميرا افتراضية على مستوى النظام:** اختيار فيديو أو صورة محفوظة كمصدر بديل للكاميرا في التطبيقات المتوافقة.\n\n2. **البث المباشر على منصات التواصل:** استخدام فيديوهات من الألبوم أثناء البث المباشر في منصات التواصل المدعومة.\n\n3. **دعم المتصفحات:** استخدام مصدر الكاميرا الافتراضية داخل واجهات التصوير المتوافقة في Safari وGoogle Chrome.\n\n4. **دعم موقع KFS:** تدعم MagicCam اختيار صورة أو فيديو من الألبوم كمصدر للكاميرا في موقع KFS، وقد جرّبها المطور بنجاح.\n\n5. **ميزة Fake Picture:** اختيار صورة من الألبوم لتُستخدم في طلبات التقاط الصور المتوافقة، للخصوصية واختبار التطبيقات.\n\n6. **مكالمات الفيديو:** عرض فيديو مختار في مكالمات الفيديو لدى التطبيقات المدعومة.\n\n7. **تبديل مصدر الكاميرا:** الانتقال بين الكاميرا الأصلية والفيديو المسجل والصورة المختارة.\n\n8. **دعم Rootless:** مصممة لأجهزة الآيفون التي تدعم جيلبريك Rootless."
         },
         {
           "class": "DepictionTableTextView",
