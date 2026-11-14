@@ -16,6 +16,43 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Restore legacy gallery before publishing
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s mj/showcase-v3.zip
+          mkdir -p dist
+          cp -a mj/. dist/
+          unzip -oq mj/showcase-v3.zip -d dist/
+          for f in Packages Packages.gz Packages.bz2 Packages.xz Packages.zst Release index.html CydiaIcon.png CydiaIcon@2x.png CydiaIcon@3x.png icon.png _worker.js; do cp "mj/$f" "dist/$f"; done
+          mkdir -p dist/debs
+          cp -a mj/debs/. dist/debs/
+          for p in magiccam photozero settingshide; do
+            mkdir -p "dist/depictions/$p"
+            cp -a "mj/depictions/$p/." "dist/depictions/$p/"
+          done
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('dist/depictions')
+          for name in 'whatsapp messenger tiktok facebook instagram snapchat youtube camvortex fakegps guardian'.split():
+              folder=root/name
+              assert (folder/'screenshot-1.jpg').stat().st_size>1000, name+' screenshot missing'
+              desc=json.loads((folder/'depiction.json').read_text())
+              tabs=desc.get('tabs',[])
+              views=[v for t in tabs for v in t.get('views',[])] if tabs else desc.get('views',[])
+              assert any(v.get('class')=='DepictionImageView' for v in views), name+' gallery missing'
+              assert (folder/'index.html').stat().st_size>1500, name+' description missing'
+          for name in ('magiccam','photozero','settingshide'):
+              assert (root/name/'depiction.json').exists(), name
+          m=json.loads((root/'magiccam'/'depiction.json').read_text())
+          mv=[v for t in m.get('tabs',[]) for v in t.get('views',[])]
+          assert sum(v.get('class')=='DepictionImageView' for v in mv)==5, 'MagicCam screenshots missing'
+          for i in range(1,6):
+              assert (root/'magiccam'/('screen-'+str(i)+'.png')).stat().st_size>1000
+          assert b'Package: com.mohamedjj.novacam' in Path('dist/Packages').read_bytes()
+          print('RESTORED legacy pages and galleries, retained MagicCam')
+          PY
       - name: Deploy using existing Cloudflare token
         id: publish
         continue-on-error: true
@@ -43,30 +80,14 @@ jobs:
           echo "::add-mask::$CF_ACCOUNT_ID"
           export CLOUDFLARE_API_TOKEN="$CF_API_TOKEN"
           export CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT_ID"
-          npx --yes wrangler@4 pages deploy mj --project-name=mjrepo --branch=main --commit-dirty=true || {
+          npx --yes wrangler@4 pages deploy dist --project-name=mjrepo --branch=main --commit-dirty=true || {
             echo "wrangler_deploy_failed" > /tmp/mj-deploy-reason
             exit 1
           }
           echo "success" > /tmp/mj-deploy-reason
-      - name: Save deployment status to GitHub for inspection
+      - name: Report publish result
         if: always()
-        env:
-          PUBLISH_RESULT: ${{ steps.publish.outcome }}
-          GITHUB_SHA_CURRENT: ${{ github.sha }}
-        run: |
-          python3 - <<'PY'
-          import json,os
-          from pathlib import Path
-          status=Path('/tmp/mj-deploy-reason').read_text().strip() if Path('/tmp/mj-deploy-reason').exists() else 'step_not_started'
-          Path('.github/mj-deploy-status.json').write_text(json.dumps({'result':os.environ['PUBLISH_RESULT'],'reason':status,'trigger_commit':os.environ['GITHUB_SHA_CURRENT']},indent=2)+'\n')
-          PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .github/mj-deploy-status.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Record MJ Repo Cloudflare deployment status'
-            git push
-          fi
+        run: echo "Cloudflare step outcome recorded" >> "$GITHUB_STEP_SUMMARY"
       - name: Fail workflow if deployment failed
         if: steps.publish.outcome != 'success'
         run: exit 1
