@@ -280,7 +280,6 @@ Author: NovaCam
 Depends: ellekit
 Description: System-wide virtual camera for compatible iOS applications, live video and browser camera workflows.
  Choose prerecorded videos or images as an alternate camera source in compatible apps.
- Browser and identity verification compatibility varies, and genuine live capture may be required.
 Depiction: https://mjrepo.pages.dev/depictions/magiccam/
 SileoDepiction: https://mjrepo.pages.dev/depictions/magiccam/depiction.json
 Homepage: https://mjrepo.pages.dev/depictions/magiccam/
