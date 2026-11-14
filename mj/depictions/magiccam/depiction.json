@@ -24,15 +24,6 @@
           "markdown": "**System-Wide Virtual Camera:** Select prerecorded videos or pictures as an alternate camera feed for compatible applications.\n\n**Social Media Live Streaming:** Use chosen videos in supported live-streaming flows on social media platforms."
         },
         {
-          "class": "DepictionImageView",
-          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-1.png",
-          "width": 258,
-          "height": 540,
-          "cornerRadius": 14,
-          "alignment": 1,
-          "xPadding": 6
-        },
-        {
           "class": "DepictionHeaderView",
           "title": "2. Browser Camera Support / Camera Forms and KFS"
         },
@@ -41,30 +32,12 @@
           "markdown": "**Browser Camera Support:** Use an alternate camera source in compatible Safari and Google Chrome browser camera interfaces.\n\n**Camera Forms and KFS:** Select images or videos for compatible browser camera interfaces, including camera-based forms on KFS."
         },
         {
-          "class": "DepictionImageView",
-          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-2.png",
-          "width": 258,
-          "height": 540,
-          "cornerRadius": 14,
-          "alignment": 1,
-          "xPadding": 6
-        },
-        {
           "class": "DepictionHeaderView",
           "title": "3. Fake Picture / Video Calls"
         },
         {
           "class": "DepictionMarkdownView",
           "markdown": "**Fake Picture:** Choose a saved photo as the image returned in compatible camera-photo workflows, including privacy and app testing.\n\n**Video Calls:** Switch to a selected video during video calls in supported applications."
-        },
-        {
-          "class": "DepictionImageView",
-          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-3.png",
-          "width": 258,
-          "height": 540,
-          "cornerRadius": 14,
-          "alignment": 1,
-          "xPadding": 6
         },
         {
           "class": "DepictionHeaderView",
@@ -91,24 +64,6 @@
           "markdown": "**Safari & Google Chrome support:** Use selected videos and pictures for browser camera requests."
         },
         {
-          "class": "DepictionImageView",
-          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-4.png",
-          "width": 258,
-          "height": 540,
-          "cornerRadius": 14,
-          "alignment": 1,
-          "xPadding": 6
-        },
-        {
-          "class": "DepictionImageView",
-          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-5.png",
-          "width": 258,
-          "height": 540,
-          "cornerRadius": 14,
-          "alignment": 1,
-          "xPadding": 6
-        },
-        {
           "class": "DepictionHeaderView",
           "title": "العربية — المميزات"
         },
@@ -125,6 +80,55 @@
           "class": "DepictionTableTextView",
           "title": "Rootless",
           "text": "Compatible jailbroken devices"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Screenshots / لقطات الشاشة"
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-1.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-2.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-3.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-4.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-5.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
         }
       ]
     }
