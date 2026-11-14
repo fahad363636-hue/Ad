@@ -86,34 +86,49 @@
           "title": "Screenshots / لقطات الشاشة"
         },
         {
-          "class": "DepictionScreenshotsView",
-          "itemCornerRadius": 16,
-          "itemSize": {
-            "x": 190,
-            "y": 398
-          },
-          "screenshots": [
-            {
-              "url": "https://mjrepo.pages.dev/depictions/magiccam/screen-1.png",
-              "accessibilityText": "MagicCam screenshot 1"
-            },
-            {
-              "url": "https://mjrepo.pages.dev/depictions/magiccam/screen-2.png",
-              "accessibilityText": "MagicCam screenshot 2"
-            },
-            {
-              "url": "https://mjrepo.pages.dev/depictions/magiccam/screen-3.png",
-              "accessibilityText": "MagicCam screenshot 3"
-            },
-            {
-              "url": "https://mjrepo.pages.dev/depictions/magiccam/screen-4.png",
-              "accessibilityText": "MagicCam screenshot 4"
-            },
-            {
-              "url": "https://mjrepo.pages.dev/depictions/magiccam/screen-5.png",
-              "accessibilityText": "MagicCam screenshot 5"
-            }
-          ]
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-1.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-2.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-3.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-4.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiccam/screen-5.png",
+          "width": 258,
+          "height": 540,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
         }
       ]
     }
