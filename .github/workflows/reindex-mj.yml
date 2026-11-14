@@ -32,7 +32,7 @@ jobs:
           (repo/'Packages.xz').write_bytes(lzma.compress(data, format=lzma.FORMAT_XZ))
           subprocess.run(['zstd','-q','-f','-19','-o',str(repo/'Packages.zst'),str(repo/'Packages')],check=True)
           names=['Packages','Packages.gz','Packages.bz2','Packages.xz','Packages.zst']
-          release=['Origin: MJ Repo','Label: MJ Repo','Suite: stable','Codename: ios','Version: 1.0','Architectures: iphoneos-arm64','Components: main','Description: Mohamedjj licensed rootless iOS packages', 'Date: '+datetime.now(timezone.utc).strftime('%a, %d %b %Y %H:%M:%S GMT')]
+          release=['Origin: MJ Repo','Label: 00 MJ Repo','Suite: stable','Codename: ios','Version: 1.0','Architectures: iphoneos-arm64','Components: main','Description: Mohamedjj licensed rootless iOS packages', 'Date: '+datetime.now(timezone.utc).strftime('%a, %d %b %Y %H:%M:%S GMT')]
           for name,algo in [('MD5Sum','md5'),('SHA256','sha256')]:
               release.append(name+':')
               for filename in names:
