@@ -6,16 +6,16 @@ Version: 1.0
 Architectures: iphoneos-arm64
 Components: main
 Description: Mohamedjj licensed rootless iOS packages
-Date: Sat, 14 Nov 2026 22:48:18 GMT
+Date: Sat, 14 Nov 2026 23:23:28 GMT
 MD5Sum:
- db98d743685be1a9cbbd56cc6ef7fe58 13280 Packages
- 0893177b3e9c769f964a604beb859640 4312 Packages.gz
- 3f1ac2cb05b07d7410f32f1b1bf66956 4208 Packages.bz2
- 28cf8eed732c68603ae80de002cd17a8 4060 Packages.xz
- 924fef682794a97e1fdadb5ac1f1d371 4121 Packages.zst
+ 89dcfff1aa7a8d4c2d98bac1b2aee2cb 13181 Packages
+ dd1b9189dd31cfe8aaf1557804201c52 4263 Packages.gz
+ e962c030f02df5b452badd0f38501753 4179 Packages.bz2
+ 9fc5a4eb207fb98684a2bf12587345d5 4008 Packages.xz
+ 8f77112a376d3dd92976d130702bd6f1 4073 Packages.zst
 SHA256:
- 9cc4938ccbcd572264c71ec27f7717b4b71f8d6c403668edffa3d16da584375e 13280 Packages
- 09caadcb3e59316c58ea3e0239d111dc483bcd8aa11c8b03444afbfd15e5951b 4312 Packages.gz
- 4100e7ebdee3d72cfbfede3c8e2da4731ddc6cf8f5c8c5e92bb32e8480d1e5e1 4208 Packages.bz2
- a4730114cc7c0ef7f71596bae80b12666780a8e92c5a067fc2cd5ef3d80f37ff 4060 Packages.xz
- 2b834ba51ea83a384377ea732cbbb8af0afd1f189a41dff83ea289459644c020 4121 Packages.zst
+ 71c6a65e807dddd225ffeb4de404c8c16edb7c17521713ede51ebb1851bc8f2e 13181 Packages
+ c133817d8d7cc452845e0e77fe9298492702cbab2cb633268d6bfee302b099ea 4263 Packages.gz
+ 10564a2217440d6c25d527dde89e7f43d1d7f551ae0fd266247ba664c6f2502f 4179 Packages.bz2
+ 116f58b1ead233a0ff8a05b9e7b6ff1f4839798b3fcd97ec166ac34d3933ee1f 4008 Packages.xz
+ 4f332e8ec66dd6d643bc12082647b6750282f446244a750be47cfc33ca76e526 4073 Packages.zst
