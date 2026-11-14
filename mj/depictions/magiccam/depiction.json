@@ -38,7 +38,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**Browser Camera Support:** Use an alternate camera source in compatible Safari and Google Chrome browser camera interfaces.\n\n**Camera Forms and KFS:** Select images or videos for compatible browser camera interfaces, including camera-based forms on KFS. Identity services may require genuine live capture."
+          "markdown": "**Browser Camera Support:** Use an alternate camera source in compatible Safari and Google Chrome browser camera interfaces.\n\n**Camera Forms and KFS:** Select images or videos for compatible browser camera interfaces, including camera-based forms on KFS."
         },
         {
           "class": "DepictionImageView",
@@ -80,7 +80,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**KFS** camera-input illustration: MagicCam can provide user-selected pictures or videos only in compatible camera interfaces. **Illustrative example, not a tested KFS screenshot.** Identity verification services may require genuine live capture and can reject substituted images."
+          "markdown": "**KFS** camera-input illustration: MagicCam can provide user-selected pictures or videos only in compatible camera interfaces. **Illustrative example, not a tested KFS screenshot.**"
         },
         {
           "class": "DepictionHeaderView",
@@ -88,7 +88,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Camera source substitution for compatible browser camera requests. **Browser illustrations are included in the full web depiction**; they are not device-tested screenshots."
+          "markdown": "Camera source substitution for compatible browser camera requests. **Browser examples are shown on the full web page.**"
         },
         {
           "class": "DepictionImageView",
@@ -114,7 +114,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**MagicCam — كاميرا افتراضية على مستوى النظام**\n\n1. **كاميرا افتراضية على مستوى النظام:** اختيار فيديو أو صورة محفوظة كمصدر بديل للكاميرا في التطبيقات المتوافقة.\n\n2. **البث المباشر على منصات التواصل:** استخدام فيديوهات من الألبوم أثناء البث المباشر في منصات التواصل المدعومة.\n\n3. **دعم المتصفحات:** استخدام مصدر الكاميرا الافتراضية داخل واجهات التصوير المتوافقة في Safari وGoogle Chrome.\n\n4. **نماذج الكاميرا وموقع KFS:** اختيار صور أو فيديوهات في واجهات التصوير المتوافقة، بما فيها النماذج التي تستخدم الكاميرا في موقع KFS. بعض خدمات التحقق تتطلب تصويرًا مباشرًا حقيقيًا.\n\n5. **ميزة Fake Picture:** اختيار صورة من الألبوم لتُستخدم في طلبات التقاط الصور المتوافقة، للخصوصية واختبار التطبيقات.\n\n6. **مكالمات الفيديو:** عرض فيديو مختار في مكالمات الفيديو لدى التطبيقات المدعومة.\n\n7. **تبديل مصدر الكاميرا:** الانتقال بين الكاميرا الأصلية والفيديو المسجل والصورة المختارة.\n\n8. **دعم Rootless:** مصممة لأجهزة الآيفون التي تدعم جيلبريك Rootless.\n\n*يتغير التوافق باختلاف الجهاز والتطبيق والمتصفح. قد تتطلب إجراءات التحقق تصويرًا حيًا حقيقيًا.*"
+          "markdown": "**MagicCam — كاميرا افتراضية على مستوى النظام**\n\n1. **كاميرا افتراضية على مستوى النظام:** اختيار فيديو أو صورة محفوظة كمصدر بديل للكاميرا في التطبيقات المتوافقة.\n\n2. **البث المباشر على منصات التواصل:** استخدام فيديوهات من الألبوم أثناء البث المباشر في منصات التواصل المدعومة.\n\n3. **دعم المتصفحات:** استخدام مصدر الكاميرا الافتراضية داخل واجهات التصوير المتوافقة في Safari وGoogle Chrome.\n\n4. **نماذج الكاميرا وموقع KFS:** اختيار صور أو فيديوهات في واجهات التصوير المتوافقة، بما فيها النماذج التي تستخدم الكاميرا في موقع KFS.\n\n5. **ميزة Fake Picture:** اختيار صورة من الألبوم لتُستخدم في طلبات التقاط الصور المتوافقة، للخصوصية واختبار التطبيقات.\n\n6. **مكالمات الفيديو:** عرض فيديو مختار في مكالمات الفيديو لدى التطبيقات المدعومة.\n\n7. **تبديل مصدر الكاميرا:** الانتقال بين الكاميرا الأصلية والفيديو المسجل والصورة المختارة.\n\n8. **دعم Rootless:** مصممة لأجهزة الآيفون التي تدعم جيلبريك Rootless."
         },
         {
           "class": "DepictionTableTextView",
