@@ -1,0 +1,50 @@
+name: Rebuild Sileo indexes
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'mj/Packages'
+      - '.github/workflows/rebuild-sileo-index.yml'
+permissions:
+  contents: write
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install zstd
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq zstd
+      - name: Regenerate compressed indexes and Release
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import gzip, bz2, lzma, hashlib, subprocess, datetime
+          from pathlib import Path
+          root=Path("mj")
+          content=(root/"Packages").read_bytes()
+          (root/"Packages.gz").write_bytes(gzip.compress(content, compresslevel=9, mtime=0))
+          (root/"Packages.bz2").write_bytes(bz2.compress(content, compresslevel=9))
+          (root/"Packages.xz").write_bytes(lzma.compress(content, format=lzma.FORMAT_XZ, preset=9))
+          subprocess.run(["zstd","-q","-f","-19","-o",str(root/"Packages.zst"),str(root/"Packages")],check=True)
+          files=["Packages","Packages.gz","Packages.bz2","Packages.xz","Packages.zst"]
+          lines=["Origin: 00 MJ Repo","Label: 00 MJ Repo","Suite: stable","Codename: ios","Version: 1.0","Architectures: iphoneos-arm64","Components: main","Description: Mohamedjj licensed rootless iOS packages","Date: "+datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")]
+          for title,algo in [("MD5Sum","md5"),("SHA256","sha256")]:
+              lines.append(title+":")
+              for name in files:
+                  data=(root/name).read_bytes()
+                  lines.append(" "+hashlib.new(algo,data).hexdigest()+" "+str(len(data))+" "+name)
+          (root/"Release").write_text("\n".join(lines)+"\n",encoding="utf-8")
+          assert b"Package: com.mohamedjj.novacam" in content
+          print("Validated MagicCam entry and refreshed five indexes + Release")
+          PY
+      - name: Commit updated APT metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mj/Packages.gz mj/Packages.bz2 mj/Packages.xz mj/Packages.zst mj/Release
+          if ! git diff --cached --quiet; then
+            git commit -m "Regenerate Sileo indexes for MagicCam"
+            git push
+          fi
