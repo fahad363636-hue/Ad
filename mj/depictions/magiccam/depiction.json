@@ -76,6 +76,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "KFS — Identity Verification Example"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**KFS** camera-input illustration: MagicCam can provide user-selected pictures or videos only in compatible camera interfaces. **Illustrative example, not a tested KFS screenshot.** Identity verification services may require genuine live capture and can reject substituted images."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Safari & Google Chrome"
         },
         {
