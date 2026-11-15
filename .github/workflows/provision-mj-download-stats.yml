@@ -41,7 +41,7 @@ jobs:
               sql='CREATE TABLE IF NOT EXISTS downloads (package TEXT PRIMARY KEY, count INTEGER NOT NULL DEFAULT 0, last_download TEXT);'
               call('/'+dbid+'/query',method='POST',body={'sql':sql})
               print('D1_READY=true')
-          with open('/tmp/mj-d1-id','w') as f: f.write(dbid)
+              with open('/tmp/mj-d1-id','w') as f: f.write(dbid)
           except urllib.error.HTTPError as exc:
               print('Cloudflare D1 API error HTTP',exc.code,exc.read().decode()[:1100])
               raise
