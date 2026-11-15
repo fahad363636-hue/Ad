@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#121d3b"><title>إحصاءات التحميل | MJ Repo</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;color:#ecf2ff;background:#0a1124}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% 0,#263f84 0,transparent 65%),#0a1124;min-height:100vh}.wrap{max-width:970px;margin:auto;padding:30px 16px 70px}a{color:#b2d5ff}h1{font-size:clamp(27px,5vw,40px);margin:17px 0 4px}.muted{color:#b9c7df}.panel{padding:23px;background:#fff1;border:1px solid #ffffff24;border-radius:20px;margin:20px 0}.metric{font-size:48px;font-weight:800;direction:ltr;text-align:right}.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}.tool{background:#ffffff0d;border:1px solid #ffffff25;border-radius:17px;padding:18px}.tool strong{display:block;direction:ltr;text-align:left;word-break:break-word}.num{font-weight:800;font-size:32px;margin-top:12px;font-variant-numeric:tabular-nums}.desc{font-size:13px;color:#b9c7df}.status{padding:15px;border-radius:13px;background:#ffffff14;margin-top:15px}.error{background:#5b331eaa}.btn{display:inline-block;text-decoration:none;color:#fff;border:1px solid #ffffff64;border-radius:11px;padding:9px 15px;font-size:14px}.footer{margin-top:30px;color:#b9c7df;font-size:13px}@media(max-width:600px){.grid{grid-template-columns:1fr 1fr}.tool{padding:13px}.tool strong{font-size:12px}.num{font-size:27px}}@media(max-width:390px){.grid{grid-template-columns:1fr}}
+</style></head><body><main class="wrap">
+<a class="btn" href="/">العودة إلى MJ Repo</a>
+<h1>إحصاءات تحميل الأدوات</h1><p class="muted">MJ Repo · Mohamedjj — Download statistics</p>
+<section class="panel"><div class="muted">إجمالي طلبات تحميل ملفات DEB المسجلة</div><div class="metric" id="total">—</div><p class="desc">هذه الأرقام لطلبات تحميل الملفات، وليست عدد المشترين أو مرات تثبيت الأدوات. يبدأ العد من تاريخ تفعيل قاعدة البيانات ولا يشمل التحميلات القديمة.</p></section>
+<div id="status" class="status" role="status">جارٍ قراءة الإحصاءات...</div>
+<section class="grid" id="tools" aria-label="عدد تحميلات الأدوات"></section>
+<p class="footer">يحتسب النظام الطلبات الناجحة التي تبدأ تنزيل ملف DEB، وقد تشمل إعادة التحميل ولا تعني اكتمال التثبيت.</p>
+</main>
+<script>
+const statusEl=document.getElementById('status'),grid=document.getElementById('tools'),total=document.getElementById('total');
+(async()=>{
+ try{
+  const response=await fetch('/api/downloads',{cache:'no-store'});
+  const data=await response.json();
+  if(!response.ok||!data.enabled){statusEl.className='status error';statusEl.textContent='العدّاد غير مفعّل بعد: يلزم ربط قاعدة بيانات Cloudflare D1.';return;}
+  statusEl.textContent='الإحصاءات منذ تفعيل العدّاد · آخر تحديث عند فتح الصفحة';
+  total.textContent=Number(data.total||0).toLocaleString('en-US');
+  for(const item of (data.packages||[])){
+   const card=document.createElement('article');card.className='tool';
+   const name=document.createElement('strong');name.textContent=item.name;
+   const number=document.createElement('div');number.className='num';number.textContent=Number(item.count||0).toLocaleString('en-US');
+   const label=document.createElement('div');label.className='desc';label.textContent='طلب تحميل · '+item.version;
+   card.append(name,number,label);grid.append(card);
+  }
+ }catch(e){statusEl.className='status error';statusEl.textContent='تعذّر قراءة الإحصاءات حاليًا.';}
+})();
+</script></body></html>
