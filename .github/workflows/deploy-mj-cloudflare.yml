@@ -97,6 +97,37 @@ jobs:
             exit 1
           }
           echo "success" > /tmp/mj-deploy-reason
+      - name: Verify live download statistics and preserved depictions
+        if: steps.publish.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,time,urllib.request
+          base='https://mjrepo.pages.dev'
+          def fetch(path):
+              req=urllib.request.Request(base+path,headers={'User-Agent':'MJRepo-verification/1.0','Cache-Control':'no-cache'})
+              with urllib.request.urlopen(req,timeout=25) as resp:
+                  return resp.status,resp.read()
+          last=None
+          for i in range(6):
+              try:
+                  status,payload=fetch('/api/downloads')
+                  report=json.loads(payload)
+                  assert status==200 and report.get('enabled') is True, report
+                  assert len(report.get('packages',[]))>=13, 'Not all packages listed'
+                  assert all(isinstance(p.get('count'),int) for p in report['packages']), 'Invalid counters'
+                  print('STATS_LIVE=true PACKAGE_COUNT='+str(len(report['packages']))+' TOTAL='+str(report['total']))
+                  for path in ['/downloads/','/depictions/whatsapp/screenshot-1.jpg','/depictions/magiccam/screen-1.png']:
+                      code,data=fetch(path)
+                      assert code==200 and len(data)>1000, path+' inaccessible'
+                  print('PAGES_AND_SCREENSHOTS_OK')
+                  break
+              except Exception as exc:
+                  last=exc
+                  if i==5: raise
+                  time.sleep(6)
+          PY
       - name: Report publish result
         if: always()
         run: echo "Cloudflare step outcome recorded" >> "$GITHUB_STEP_SUMMARY"
