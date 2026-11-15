@@ -5,6 +5,7 @@ on:
     paths:
       - 'mj/**'
       - '.github/workflows/deploy-mj-cloudflare.yml'
+      - '.github/mj-download-db.json'
   workflow_dispatch:
 permissions:
   contents: write
@@ -80,7 +81,19 @@ jobs:
           echo "::add-mask::$CF_ACCOUNT_ID"
           export CLOUDFLARE_API_TOKEN="$CF_API_TOKEN"
           export CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT_ID"
-          npx --yes wrangler@4 pages deploy dist --project-name=mjrepo --branch=main --commit-dirty=true || {
+          extra_config=()
+          if [ -f .github/mj-download-db.json ]; then
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          database=json.loads(Path('.github/mj-download-db.json').read_text())
+          assert database['binding']=='DOWNLOAD_DB'
+          cfg={'name':'mjrepo','pages_build_output_dir':'./dist','compatibility_date':'2026-11-15','d1_databases':[{'binding':'DOWNLOAD_DB','database_name':database['database_name'],'database_id':database['database_id']}]}
+          Path('wrangler.json').write_text(json.dumps(cfg,indent=2))
+          PY
+            extra_config=(--config wrangler.json)
+          fi
+          npx --yes wrangler@4 pages deploy dist --project-name=mjrepo --branch=main --commit-dirty=true "${extra_config[@]}" || {
             echo "wrangler_deploy_failed" > /tmp/mj-deploy-reason
             exit 1
           }
