@@ -6,6 +6,7 @@ on:
       - 'mj/**'
       - '.github/workflows/deploy-mj-cloudflare.yml'
       - '.github/mj-download-db.json'
+      - '.github/workflows/provision-mj-download-stats.yml'
   workflow_dispatch:
 permissions:
   contents: write
