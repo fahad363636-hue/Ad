@@ -278,8 +278,8 @@ Section: Tweaks
 Maintainer: NovaCam
 Author: NovaCam
 Depends: ellekit
-Description: System-wide virtual camera for compatible iOS applications, live video and browser camera workflows.
- Choose prerecorded videos or images as an alternate camera source in compatible apps.
+Description: System-wide virtual camera for all apps, live streaming and browser camera workflows.
+ Choose prerecorded videos or images as an alternate camera source throughout the system. Supports KFS. Successfully tested.
 Depiction: https://mjrepo.pages.dev/depictions/magiccam/
 SileoDepiction: https://mjrepo.pages.dev/depictions/magiccam/depiction.json
 Homepage: https://mjrepo.pages.dev/depictions/magiccam/
