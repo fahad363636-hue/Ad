@@ -1,0 +1,79 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tintColor": "#319C92",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details / التفاصيل",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "DeepClean — AI Deep Cleaning"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**Version 0.4.1 · Rootless · iOS 15 / 16 / 17**"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "🇬🇧 English"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "DeepClean is an AI-assisted iPhone storage cleaning tool designed to scan for accumulated caches, temporary files and storage leftovers that traditional cleaners may miss. It helps you identify unnecessary data and reclaim space so your device can feel more responsive. Results depend on the device and available removable data.\n\n**Highlights:**\n- Intelligent deep storage scan\n- Detect accumulated caches and leftover files\n- Recover available storage space\n- Helps improve device responsiveness"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "🇸🇦 العربية"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "DeepClean أداة تنظيف عميق لمساحة تخزين iPhone، تعتمد على تحليل ذكي مدعوم بالذكاء الاصطناعي لاكتشاف الملفات المؤقتة والذاكرة المخبأة وبقايا البيانات التي قد لا تعالجها أدوات التنظيف المعتادة. تساعد على تحرير المساحة وتحسين سلاسة الاستخدام، وتختلف النتائج حسب الجهاز ونوعية الملفات.\n\n**المميزات:**\n- فحص عميق ذكي للمساحة\n- اكتشاف ملفات التخزين المؤقت وبقايا البيانات\n- استعادة المساحة المتاحة للتنظيف\n- المساعدة على تحسين سلاسة الجهاز"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Test Results / نتائج التجربة"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**Creator-reported results / نتائج ذكرها المطور:**\n\n- Device 1 / الجهاز الأول: **19 GB** freed\n- Device 2 / الجهاز الثاني: **30 GB** freed\n\nThe screenshots below illustrate the 30 GB difference from **198.4 GB used** to **168.4 GB used**, on a **256 GB iPhone**.\n\n*Results vary and are not guaranteed. Device compatibility and function should be verified on your iOS setup.*\n\n*النتائج تختلف وليست مضمونة. يُنصح بالتأكد من توافق الجهاز ونظام iOS.*"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Before / قبل"
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/deepclean/before.jpg",
+          "width": 280,
+          "height": 600,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 8
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "After / بعد"
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/deepclean/after.jpg",
+          "width": 280,
+          "height": 600,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 8
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "📞 الدعم الفني | Technical Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**🇸🇦 العربية**\n\nهل تحتاج إلى مساعدة أو لديك استفسار؟ تواصل مع المطور للحصول على الدعم الفني والمساعدة في التثبيت.\n\n**🇬🇧 English**\n\nNeed help or have a question? Contact the developer for technical support and installation assistance.\n\n**Email:** [fahad363636@gmail.com](mailto:fahad363636@gmail.com)\n\n**Telegram:** [@mohmo10s](https://t.me/mohmo10s)"
+        }
+      ]
+    }
+  ]
+}

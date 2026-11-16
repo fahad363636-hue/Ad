@@ -312,3 +312,23 @@ SHA1: 0ae12c5a4eae472529f0b4c8d2b20fcd43a0836a
 SHA256: 54a4683e91d481cb965d0a72ab1ab6ce294148ac5006d4266ba12938d98e2036
 SHA512: 1af3208dea659b4e28ef56037476c325241afdb150ba2a13d44cef4d73653a8fc86de4dad18bdd21b1ea7a1480db0fe55b65ce00f0ba4b9a7055aa58caa64092
 
+Package: com.mohamedjj.deepclean
+Name: DeepClean
+Version: 0.4.1
+Architecture: iphoneos-arm64
+Section: Utilities
+Maintainer: Mohamedjj
+Author: Mohamedjj
+Depends: firmware (>= 15.0), ldid
+Conflicts: com.mohamedjj.mjpaperboardcleaner
+Description: AI-assisted deep cleaning for accumulated caches and storage leftovers. Creator reports up to 30 GB recovered in testing; results vary.
+Depiction: https://mjrepo.pages.dev/depictions/deepclean/
+SileoDepiction: https://mjrepo.pages.dev/depictions/deepclean/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/deepclean/
+Icon: https://mjrepo.pages.dev/depictions/deepclean/icon.png
+Filename: ./debs/com.mohamedjj.deepclean_0.4.1_iphoneos-arm64.deb
+Size: 1240640
+MD5sum: 43688904c4dfc9c81a91f0f20c323979
+SHA1: e50a397d414f71e4ac0c3121ddb16c659b943803
+SHA256: feac08e337e12349e168e4a0cc9ea2033e28b1077a42f02695e2caf0d90465c9
+SHA512: 8bd50625bf18fdeb91fe0008922e021e8959f24bb1ee12b9540d9d6d0af691be7b66d486ed3596308fd64974d4083f17fc3278ea6155644d9cbb9d2e908dba03

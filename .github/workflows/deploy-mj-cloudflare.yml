@@ -29,7 +29,7 @@ jobs:
           for f in Packages Packages.gz Packages.bz2 Packages.xz Packages.zst Release index.html CydiaIcon.png CydiaIcon@2x.png CydiaIcon@3x.png icon.png _worker.js; do cp "mj/$f" "dist/$f"; done
           mkdir -p dist/debs
           cp -a mj/debs/. dist/debs/
-          for p in magiccam photozero settingshide; do
+          for p in magiccam photozero settingshide deepclean; do
             mkdir -p "dist/depictions/$p"
             cp -a "mj/depictions/$p/." "dist/depictions/$p/"
           done
@@ -92,13 +92,15 @@ jobs:
               views=[v for t in tabs for v in t.get('views',[])] if tabs else desc.get('views',[])
               assert any(v.get('class')=='DepictionImageView' for v in views), name+' gallery missing'
               assert (folder/'index.html').stat().st_size>1500, name+' description missing'
-          for name in ('magiccam','photozero','settingshide'):
+          for name in ('magiccam','photozero','settingshide','deepclean'):
               assert (root/name/'depiction.json').exists(), name
           m=json.loads((root/'magiccam'/'depiction.json').read_text())
           mv=[v for t in m.get('tabs',[]) for v in t.get('views',[])]
           assert sum(v.get('class')=='DepictionImageView' for v in mv)==5, 'MagicCam screenshots missing'
           for i in range(1,6):
               assert (root/'magiccam'/('screen-'+str(i)+'.png')).stat().st_size>1000
+          assert (root/'deepclean'/'before.jpg').stat().st_size>1000 and (root/'deepclean'/'after.jpg').stat().st_size>1000
+          assert b'Package: com.mohamedjj.deepclean' in Path('dist/Packages').read_bytes()
           assert b'Package: com.mohamedjj.novacam' in Path('dist/Packages').read_bytes()
           print('RESTORED legacy pages and galleries, retained MagicCam')
           PY
