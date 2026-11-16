@@ -291,3 +291,24 @@ SHA1: 25ad6c5f445e7228ae443bc725093dd620e45bef
 SHA256: f5c116b8abfd585f6712e95a31ff9d657509f27d425fd06ddff88ce574c08aac
 SHA512: 875986be95a566a3becdd5bac709a4c370d92175d27ff4f274f0bace95865ef228b845cba0d6c072f68ee048a68383718826ab65db3fd8e55c593b8ee9d656cc
 
+Package: com.mohamedjj.magiclocation
+Name: MagicLocation
+Version: 0.2.0
+Architecture: iphoneos-arm64
+Description: Independent native system GPS simulation app for rootless iOS 16 and 17
+Maintainer: Mohamedjj
+Author: Mohamedjj
+Section: Utilities
+Depends: firmware (>= 16.0)
+Installed-Size: 276
+Depiction: https://mjrepo.pages.dev/depictions/magiclocation/
+SileoDepiction: https://mjrepo.pages.dev/depictions/magiclocation/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/magiclocation/
+Icon: https://mjrepo.pages.dev/depictions/magiclocation/icon.png
+Filename: ./debs/MagicLocation-0.2.0-rootless.deb
+Size: 81796
+MD5sum: 15658aa449e6c2f0c96fdb28e8cc5f56
+SHA1: 0ae12c5a4eae472529f0b4c8d2b20fcd43a0836a
+SHA256: 54a4683e91d481cb965d0a72ab1ab6ce294148ac5006d4266ba12938d98e2036
+SHA512: 1af3208dea659b4e28ef56037476c325241afdb150ba2a13d44cef4d73653a8fc86de4dad18bdd21b1ea7a1480db0fe55b65ce00f0ba4b9a7055aa58caa64092
+
