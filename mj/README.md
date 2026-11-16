@@ -18,3 +18,11 @@ Put newly approved DEBs into `debs/`, delete obsolete DEBs of the **same** packa
 - These are **pre-existing binaries**, with no alteration to the license mechanisms.
 - No GPG/Release.gpg signature is included: some package managers may display an unsigned-source warning.
 - `FaceID Menu Lock` is not included because the available package advertises *no license gate*. LiveCam Pilot builds are excluded pending verification. CamVortex Pro 1.0.4 is included as the latest available licensed DEB; this build has not been re-tested here.
+
+## DeepClean 0.4.1
+
+- Package: `com.mohamedjj.deepclean` (rootless `iphoneos-arm64`, iOS 15–17 targeted).
+- Public depiction: https://mjrepo.pages.dev/depictions/deepclean/
+- The before-and-after iPhone storage screenshots show 198.4 GB and 168.4 GB used on a 256 GB iPhone (a 30 GB difference). Lower app names are obscured.
+- A separate 19 GB result is reported by the developer; results vary and have not been independently reproduced here.
+- The published `.deb` is the user-supplied 0.4.1 package, with no changes to binaries or licenses. GitHub source blobs were checksum-verified.
