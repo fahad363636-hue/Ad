@@ -1,0 +1,71 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tintColor": "#087E9B",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details / التفاصيل",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "MagicLocation"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "MagicLocation provides full privileges for system-wide location spoofing using deep location spoofing technology. When you select a new location, the clock automatically adjusts to match the selected location’s time zone.\n\nSpoofing remains active even after disabling tweaks through Choicy or any other tool. It does not cause bans in apps because it relies on deep location spoofing technology.\n\nSuccessfully tested with Snapchat and Find My."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "العربية"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "MagicLocation أداة تتمتع بصلاحيات كاملة لتزييف الموقع على مستوى النظام، وتعتمد على تقنية التزييف العميق. عند اختيار موقع جديد، تتغير الساعة تلقائيًا لتوافق المنطقة الزمنية للموقع المختار.\n\nيستمر التزييف حتى بعد تعطيل الأدوات باستخدام Choicy أو أي أداة أخرى. ولا يسبب التزييف حظرًا في التطبيقات، لاعتماده على تقنية التزييف العميق.\n\nتمت تجربة الأداة بنجاح على Snapchat وفي ميزة العثور على الجوال (Find My)."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "0.2.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Compatibility",
+          "text": "Rootless · iOS 16 & 17"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Subscription / الاشتراك",
+          "text": "US$29.99/month"
+        },
+        {
+          "class": "DepictionButtonView",
+          "text": "Subscribe / اشترك الآن",
+          "action": "https://fahadventure034.gumroad.com/l/fglgad"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Screenshots / لقطات الشاشة"
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiclocation/screen-1.png",
+          "width": 258,
+          "height": 559,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/magiclocation/screen-2.png",
+          "width": 258,
+          "height": 559,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6
+        }
+      ]
+    }
+  ]
+}
