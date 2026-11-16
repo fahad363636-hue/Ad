@@ -37,6 +37,53 @@ jobs:
           import json
           from pathlib import Path
           root=Path('dist/depictions')
+          support_md = (
+              "**🇸🇦 العربية**\n\n"
+              "**هل تحتاج إلى مساعدة أو لديك استفسار؟**\n\n"
+              "لا تتردد في التواصل مع المطور مباشرة للحصول على الدعم الفني أو المساعدة في التثبيت والتفعيل.\n\n"
+              "**🇬🇧 English**\n\n"
+              "**Need help or have a question?**\n\n"
+              "Feel free to contact the developer directly for technical support or assistance with installation and activation.\n\n"
+              "**📧 البريد الإلكتروني | Email:** [fahad363636@gmail.com](mailto:fahad363636@gmail.com)\n\n"
+              "**💬 تيليجرام | Telegram:** [@mohmo10s](https://t.me/mohmo10s)"
+          )
+          support_html = """<section id="mj-developer-support" style="max-width:900px;margin:24px auto;padding:22px;border:1px solid rgba(128,145,185,.35);border-radius:18px;background:rgba(115,130,175,.10);color:inherit;font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif">
+          <h2 style="margin:0 0 14px;font-size:22px">📞 الدعم الفني | Technical Support</h2>
+          <div lang="ar" dir="rtl"><strong>🇸🇦 العربية</strong><p><strong>هل تحتاج إلى مساعدة أو لديك استفسار؟</strong></p><p>لا تتردد في التواصل مع المطور مباشرة للحصول على الدعم الفني أو المساعدة في التثبيت والتفعيل.</p></div>
+          <div lang="en"><strong>🇬🇧 English</strong><p><strong>Need help or have a question?</strong></p><p>Feel free to contact the developer directly for technical support or assistance with installation and activation.</p></div>
+          <p><strong>📧 البريد الإلكتروني | Email:</strong> <a href="mailto:fahad363636@gmail.com" style="color:#46b3ee;overflow-wrap:anywhere">fahad363636@gmail.com</a></p>
+          <p><strong>💬 تيليجرام | Telegram:</strong> <a href="https://t.me/mohmo10s" style="color:#46b3ee;overflow-wrap:anywhere">@mohmo10s</a></p>
+          </section>"""
+          def with_support_html(s):
+              if 'id="mj-developer-support"' in s:
+                  return s
+              closing = '</main>' if '</main>' in s else '</body>'
+              assert closing in s, "Missing HTML closing tag in depiction"
+              return s.replace(closing, support_html + closing, 1)
+          updated_html = 0
+          updated_json = 0
+          for html_path in sorted(root.glob('*/index.html')) + [Path('dist/index.html')]:
+              original = html_path.read_text(encoding='utf-8')
+              modified = with_support_html(original)
+              if modified != original:
+                  html_path.write_text(modified, encoding='utf-8')
+                  updated_html += 1
+          for json_path in sorted(root.glob('*/depiction.json')):
+              depiction = json.loads(json_path.read_text(encoding='utf-8'))
+              if depiction.get('tabs'):
+                  views = depiction['tabs'][0]['views']
+              else:
+                  views = depiction['views']
+              if not any(v.get('class') == 'DepictionMarkdownView' and '@mohmo10s' in v.get('markdown', '') for v in views):
+                  views.extend([
+                      {'class': 'DepictionHeaderView', 'title': '📞 الدعم الفني | Technical Support'},
+                      {'class': 'DepictionMarkdownView', 'markdown': support_md}
+                  ])
+                  json_path.write_text(json.dumps(depiction, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+                  updated_json += 1
+          assert updated_html >= 14, 'Expected support contact in homepage and depictions'
+          assert updated_json >= 13, 'Expected support contact in Sileo depictions'
+          print(f'CONTACT_SECTION_ADDED: {updated_html} HTML pages, {updated_json} Sileo depictions')
           for name in 'whatsapp messenger tiktok facebook instagram snapchat youtube camvortex fakegps guardian'.split():
               folder=root/name
               assert (folder/'screenshot-1.jpg').stat().st_size>1000, name+' screenshot missing'
