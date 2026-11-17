@@ -152,7 +152,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import json,time,urllib.request
+          import json,time,urllib.request,urllib.error
           base='https://mjrepo.pages.dev'
           def fetch(path):
               req=urllib.request.Request(base+path,headers={'User-Agent':'MJRepo-verification/1.0','Cache-Control':'no-cache'})
@@ -161,16 +161,19 @@ jobs:
           last=None
           for i in range(6):
               try:
-                  status,payload=fetch('/api/downloads')
-                  report=json.loads(payload)
-                  assert status==200 and report.get('enabled') is True, report
-                  assert len(report.get('packages',[]))>=13, 'Not all packages listed'
-                  assert all(isinstance(p.get('count'),int) for p in report['packages']), 'Invalid counters'
-                  print('STATS_LIVE=true PACKAGE_COUNT='+str(len(report['packages']))+' TOTAL='+str(report['total']))
-                  for path in ['/downloads/','/depictions/whatsapp/screenshot-1.jpg','/depictions/magiccam/screen-1.png']:
-                      code,data=fetch(path)
-                      assert code==200 and len(data)>1000, path+' inaccessible'
-                  print('PAGES_AND_SCREENSHOTS_OK')
+                  for private_path in ('/api/downloads','/downloads/','/downloads/index.html'):
+                      try:
+                          fetch(private_path)
+                      except urllib.error.HTTPError as error:
+                          assert error.code==401, f'{private_path} should require login, returned {error.code}'
+                      else:
+                          raise AssertionError(f'{private_path} publicly accessible')
+                  for public_path in ('/','/Packages','/depictions/whatsapp/screenshot-1.jpg','/depictions/magiccam/screen-1.png'):
+                      code,data=fetch(public_path)
+                      assert code==200 and len(data)>1000, public_path+' inaccessible'
+                  code,home=fetch('/')
+                  assert b'Download Statistics' not in home, 'Public stats button still visible'
+                  print('STATS_PRIVATE_AND_REPO_PUBLIC_OK')
                   break
               except Exception as exc:
                   last=exc
