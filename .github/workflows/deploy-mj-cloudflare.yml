@@ -104,6 +104,11 @@ jobs:
           assert b'Package: com.mohamedjj.novacam' in Path('dist/Packages').read_bytes()
           print('RESTORED legacy pages and galleries, retained MagicCam')
           PY
+      - name: Populate website with full Sileo descriptions and screenshot galleries
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 mj/scripts/render_sileo_catalog.py dist
       - name: Deploy using existing Cloudflare token
         id: publish
         continue-on-error: true
