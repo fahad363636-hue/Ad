@@ -81,7 +81,7 @@ def content_for(slug, name):
         elif kind == "DepictionImageView":
             u = safe_url(v.get("URL", ""))
             if u and urlparse(u).path.startswith("/depictions/"):
-                caption = heading if "before" in heading.lower() or "after" in heading.lower() else "Screenshot " + str(len(shots)+1)
+                caption = v.get("caption") or (heading if "before" in heading.lower() or "after" in heading.lower() else "Screenshot " + str(len(shots)+1))
                 shots.append('<figure class="sileo-shot"><img loading="lazy" decoding="async" src="' + esc(u) +
                              '" alt="' + esc(name + " — " + caption) + '"><figcaption>' + esc(caption) +
                              "</figcaption></figure>")
@@ -119,7 +119,7 @@ def replace(m):
             '</details></article>')
 
 page, n = pattern.subn(replace, page)
-assert n == 15, "Expected 15 tools; found " + str(n)
+assert n == 16, "Expected 16 tools; found " + str(n)
 style = """
 <style id="sileo-catalog-v1">
 .grid{align-items:start}.pkg-rich{display:block}.pkg-head{display:flex;gap:14px;align-items:start}

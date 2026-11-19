@@ -1,0 +1,147 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tintColor": "#218AFB",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "camPro / التفاصيل",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "camPro — Live Streaming & Video Calls"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**camPro** lets you select a prerecorded video from Photos and use it as an alternative camera source during supported live streams and video calls. Seven app modules are combined in one interface, with separate activation for each app."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Supported Applications / التطبيقات المدعومة"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- واتساب – WhatsApp\n- ماسنجر – Messenger\n- تيك توك – TikTok\n- فيسبوك – Facebook\n- إنستغرام – Instagram\n- سناب شات – Snapchat\n- يوتيوب – YouTube"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Features"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Select and import a video from the Photos library.\n- Use the selected video in supported live-streaming and video-call features.\n- Choose from seven applications in one interface.\n- Purchase and activate one app at a time with an independent license.\n- Compatibility varies by iOS, jailbreak, and app version."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "الوصف العربي"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**camPro** أداة تتيح اختيار فيديو محفوظ من ألبوم الصور واستخدامه بدل الكاميرا أثناء البث المباشر ومكالمات الفيديو في التطبيقات المتوافقة.\n\nتجمع الأداة سبعة تطبيقات في واجهة واحدة، مع اختيار التطبيق المطلوب واستيراد الفيديو وتفعيل كل تطبيق بترخيص مستقل.\n\n**السعر: 9.99 دولار لكل تطبيق، دفعة واحدة مدى الحياة، دون اشتراك شهري.**"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version / الإصدار",
+          "text": "0.3.2"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Price / السعر",
+          "text": "US$9.99 per app · one-time / 9.99 دولار لكل تطبيق مرة واحدة"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Platform / النظام",
+          "text": "Rootless iOS 15+ · ellekit · compatibility varies"
+        },
+        {
+          "class": "DepictionButtonView",
+          "text": "Buy App License / شراء ترخيص التطبيق",
+          "action": "https://fahadventure034.gumroad.com/l/kxrtfn"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Screenshots / لقطات الشاشة"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1. Video Source Selection — اختيار مصدر الفيديو"
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/campro/screen-1.png",
+          "width": 258,
+          "height": 558,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6,
+          "caption": "Video Source Selection / اختيار مصدر الفيديو"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "2. Video Call Preview — معاينة مكالمة الفيديو"
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/campro/screen-2.png",
+          "width": 258,
+          "height": 558,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6,
+          "caption": "Video Call Preview / معاينة مكالمة الفيديو"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "3. Live Streaming Preview — معاينة البث المباشر"
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/campro/screen-3.jpg",
+          "width": 258,
+          "height": 558,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6,
+          "caption": "Live Streaming Preview / معاينة البث المباشر"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "4. Live Session Interface — واجهة البث المباشر"
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/campro/screen-4.png",
+          "width": 258,
+          "height": 558,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6,
+          "caption": "Live Session Interface / واجهة البث المباشر"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "5. YouTube LIVE Preview — معاينة بث يوتيوب المباشر"
+        },
+        {
+          "class": "DepictionImageView",
+          "URL": "https://mjrepo.pages.dev/depictions/campro/screen-5.png",
+          "width": 258,
+          "height": 558,
+          "cornerRadius": 14,
+          "alignment": 1,
+          "xPadding": 6,
+          "caption": "YouTube LIVE Preview / معاينة بث يوتيوب المباشر"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "📞 الدعم الفني | Technical Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**🇸🇦 العربية:** للمساعدة في التثبيت والتفعيل تواصل مع المطور.\n\n**🇬🇧 English:** Need assistance with installation or activation? Contact the developer.\n\n**Telegram:** [@mohmo10s](https://t.me/mohmo10s)\n\n**Email:** [fahad363636@gmail.com](mailto:fahad363636@gmail.com)"
+        }
+      ]
+    }
+  ]
+}

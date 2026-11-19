@@ -332,3 +332,24 @@ MD5sum: 43688904c4dfc9c81a91f0f20c323979
 SHA1: e50a397d414f71e4ac0c3121ddb16c659b943803
 SHA256: feac08e337e12349e168e4a0cc9ea2033e28b1077a42f02695e2caf0d90465c9
 SHA512: 8bd50625bf18fdeb91fe0008922e021e8959f24bb1ee12b9540d9d6d0af691be7b66d486ed3596308fd64974d4083f17fc3278ea6155644d9cbb9d2e908dba03
+
+Package: com.mohamedjj.campro
+Name: camPro
+Version: 0.3.2
+Architecture: iphoneos-arm64
+Section: Utilities
+Maintainer: Mohamedjj
+Author: Mohamedjj
+Depends: firmware (>= 15.0), ellekit
+Installed-Size: 704
+Description: Select saved videos for supported live streams and video calls across seven apps, each with an independent license.
+Depiction: https://mjrepo.pages.dev/depictions/campro/
+SileoDepiction: https://mjrepo.pages.dev/depictions/campro/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/campro/
+Icon: https://mjrepo.pages.dev/depictions/campro/icon.png
+Filename: ./debs/com.mohamedjj.campro_0.3.2_iphoneos-arm64.deb
+Size: 103216
+MD5sum: ee352a5d2d89390b82da10f75125f22f
+SHA1: b4c253341093bc599eef735ab4f9a5d74f1a26e7
+SHA256: 92ac2ea42070eaf55aa1ed89355567783d1c2827032c3a24cc95c310c188a2ce
+SHA512: 7ed89f368a745b554967a03742f85ce758270cf1359ec42deeb2a92950e2c94d9e465e76c692227cd636512310579e9c2d32fc8d9355f9bb2289080b6738c4a0
