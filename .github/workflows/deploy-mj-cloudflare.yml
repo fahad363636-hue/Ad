@@ -29,7 +29,7 @@ jobs:
           for f in Packages Packages.gz Packages.bz2 Packages.xz Packages.zst Release index.html CydiaIcon.png CydiaIcon@2x.png CydiaIcon@3x.png icon.png _worker.js; do cp "mj/$f" "dist/$f"; done
           mkdir -p dist/debs
           cp -a mj/debs/. dist/debs/
-          for p in magiccam photozero settingshide deepclean; do
+          for p in magiccam photozero settingshide deepclean magiclocation; do
             mkdir -p "dist/depictions/$p"
             cp -a "mj/depictions/$p/." "dist/depictions/$p/"
           done

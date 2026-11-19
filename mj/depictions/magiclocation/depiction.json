@@ -35,12 +35,12 @@
         },
         {
           "class": "DepictionTableTextView",
-          "title": "Subscription / الاشتراك",
-          "text": "US$29.99/month"
+          "title": "Price / السعر",
+          "text": "US$19.99 one-time / 19.99 دولار دفعة واحدة"
         },
         {
           "class": "DepictionButtonView",
-          "text": "Subscribe / اشترك الآن",
+          "text": "Buy Once / اشترِ مرة واحدة",
           "action": "https://fahadventure034.gumroad.com/l/fglgad"
         },
         {
