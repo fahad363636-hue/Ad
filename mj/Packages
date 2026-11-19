@@ -306,11 +306,11 @@ SileoDepiction: https://mjrepo.pages.dev/depictions/magiclocation/depiction.json
 Homepage: https://mjrepo.pages.dev/depictions/magiclocation/
 Icon: https://mjrepo.pages.dev/depictions/magiclocation/icon.png
 Filename: ./debs/MagicLocation-0.2.0-rootless.deb
-Size: 81796
-MD5sum: 15658aa449e6c2f0c96fdb28e8cc5f56
-SHA1: 0ae12c5a4eae472529f0b4c8d2b20fcd43a0836a
-SHA256: 54a4683e91d481cb965d0a72ab1ab6ce294148ac5006d4266ba12938d98e2036
-SHA512: 1af3208dea659b4e28ef56037476c325241afdb150ba2a13d44cef4d73653a8fc86de4dad18bdd21b1ea7a1480db0fe55b65ce00f0ba4b9a7055aa58caa64092
+Size: 81958
+MD5sum: 99374033a806ddb845098299cdaa9548
+SHA1: b1321bceeb802682d690b7ac0063c5d13783b031
+SHA256: 7e2fa4acc622c46d43f53442e1d7f8d61d19546611512d9d8d91661827cbac8f
+SHA512: 448dc478ba01ee368070897e138da6793602a694f4af62e63b8c7f0d8503cfe913a445345357065cb4d08a38889162aba42ad79374c763cc631ba630c8527a04
 
 Package: com.mohamedjj.deepclean
 Name: DeepClean

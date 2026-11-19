@@ -109,6 +109,35 @@ jobs:
         run: |
           set -euo pipefail
           python3 mj/scripts/render_sileo_catalog.py dist
+      - name: Rebuild Sileo indexes and Release from updated Packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq zstd
+          python3 - <<'PY'
+          import gzip, bz2, lzma, hashlib, subprocess
+          from pathlib import Path
+          from datetime import datetime, timezone
+          root=Path('dist')
+          packages=(root/'Packages').read_bytes()
+          (root/'Packages.gz').write_bytes(gzip.compress(packages, compresslevel=9, mtime=0))
+          (root/'Packages.bz2').write_bytes(bz2.compress(packages, compresslevel=9))
+          (root/'Packages.xz').write_bytes(lzma.compress(packages, format=lzma.FORMAT_XZ, preset=9))
+          subprocess.run(['zstd','-q','-f','-19','-o',str(root/'Packages.zst'),str(root/'Packages')], check=True)
+          files=['Packages','Packages.gz','Packages.bz2','Packages.xz','Packages.zst']
+          release=(root/'Release').read_text(encoding='utf-8').split('MD5Sum:',1)[0].strip().splitlines()
+          release=[('Date: '+datetime.now(timezone.utc).strftime('%a, %d %b %Y %H:%M:%S GMT')) if line.startswith('Date:') else line for line in release]
+          for heading,algorithm in [('MD5Sum','md5'),('SHA256','sha256')]:
+              release.append(heading+':')
+              for name in files:
+                  data=(root/name).read_bytes()
+                  release.append(' '+hashlib.new(algorithm,data).hexdigest()+' '+str(len(data))+' '+name)
+          (root/'Release').write_text('\n'.join(release)+'\n', encoding='utf-8')
+          assert b'Package: com.mohamedjj.magiclocation' in packages
+          assert b'Size: 81958' in packages
+          print('APT index rebuilt for MagicLocation 0.2.0 replacement')
+          PY
       - name: Deploy using existing Cloudflare token
         id: publish
         continue-on-error: true
