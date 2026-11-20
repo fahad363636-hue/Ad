@@ -13,7 +13,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**Use selected videos and pictures as alternative camera input** across apps and websites. Rootless jailbreak tweak."
+          "markdown": "**Use selected videos and pictures as alternative camera input** across apps and websites. Supports compatible Rootless and RootHide jailbreak setups."
         },
         {
           "class": "DepictionHeaderView",
@@ -41,11 +41,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "4. Source Switching / Rootless"
+          "title": "4. Source Switching / Rootless & RootHide"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**Source Switching:** Change between the real camera, a prerecorded video and a chosen picture.\n\n**Rootless:** Built for compatible jailbroken iPhones using a rootless setup."
+          "markdown": "**Source Switching:** Change between the real camera, a prerecorded video and a chosen picture.\n\n**Rootless & RootHide:** Supports compatible jailbroken iPhones using Rootless or RootHide."
         },
         {
           "class": "DepictionHeaderView",
@@ -69,7 +69,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**MagicCam — كاميرا افتراضية على مستوى النظام**\n\n1. **كاميرا افتراضية على مستوى النظام:** اختيار فيديو أو صورة محفوظة كمصدر بديل للكاميرا في جميع التطبيقات.\n\n2. **البث المباشر على منصات التواصل:** استخدام فيديوهات من الألبوم أثناء البث المباشر في جميع منصات التواصل.\n\n3. **دعم المتصفحات:** استخدام مصدر الكاميرا الافتراضية داخل واجهات التصوير في Safari وGoogle Chrome.\n\n4. **يدعم KFS:** تدعم MagicCam اختيار صورة أو فيديو من الألبوم كمصدر للكاميرا في موقع KFS، وتمت التجربة بنجاح.\n\n5. **ميزة Fake Picture:** اختيار صورة من الألبوم لتُستخدم في طلبات التقاط الصور، للخصوصية واختبار التطبيقات.\n\n6. **مكالمات الفيديو:** عرض فيديو مختار في مكالمات الفيديو في جميع التطبيقات.\n\n7. **تبديل مصدر الكاميرا:** الانتقال بين الكاميرا الأصلية والفيديو المسجل والصورة المختارة.\n\n8. **دعم Rootless:** مصممة لأجهزة الآيفون التي تدعم جيلبريك Rootless."
+          "markdown": "**MagicCam — كاميرا افتراضية على مستوى النظام**\n\n1. **كاميرا افتراضية على مستوى النظام:** اختيار فيديو أو صورة محفوظة كمصدر بديل للكاميرا في جميع التطبيقات.\n\n2. **البث المباشر على منصات التواصل:** استخدام فيديوهات من الألبوم أثناء البث المباشر في جميع منصات التواصل.\n\n3. **دعم المتصفحات:** استخدام مصدر الكاميرا الافتراضية داخل واجهات التصوير في Safari وGoogle Chrome.\n\n4. **يدعم KFS:** تدعم MagicCam اختيار صورة أو فيديو من الألبوم كمصدر للكاميرا في موقع KFS، وتمت التجربة بنجاح.\n\n5. **ميزة Fake Picture:** اختيار صورة من الألبوم لتُستخدم في طلبات التقاط الصور، للخصوصية واختبار التطبيقات.\n\n6. **مكالمات الفيديو:** عرض فيديو مختار في مكالمات الفيديو في جميع التطبيقات.\n\n7. **تبديل مصدر الكاميرا:** الانتقال بين الكاميرا الأصلية والفيديو المسجل والصورة المختارة.\n\n8. **دعم Rootless وRootHide:** تدعم أجهزة الآيفون المتوافقة مع جيلبريك Rootless أو RootHide."
         },
         {
           "class": "DepictionTableTextView",
@@ -78,8 +78,8 @@
         },
         {
           "class": "DepictionTableTextView",
-          "title": "Rootless",
-          "text": "Compatible jailbroken devices"
+          "title": "Jailbreak",
+          "text": "Rootless & RootHide (compatible devices)"
         },
         {
           "class": "DepictionHeaderView",

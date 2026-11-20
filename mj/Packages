@@ -278,7 +278,7 @@ Section: Tweaks
 Maintainer: NovaCam
 Author: NovaCam
 Depends: ellekit
-Description: System-wide virtual camera for all apps, live streaming and browser camera workflows.
+Description: System-wide virtual camera for compatible Rootless and RootHide jailbreak devices, live streaming and browser camera workflows.
  Choose prerecorded videos or images as an alternate camera source throughout the system. Supports KFS. Successfully tested.
 Depiction: https://mjrepo.pages.dev/depictions/magiccam/
 SileoDepiction: https://mjrepo.pages.dev/depictions/magiccam/depiction.json
@@ -295,7 +295,7 @@ Package: com.mohamedjj.magiclocation
 Name: MagicLocation
 Version: 0.2.0
 Architecture: iphoneos-arm64
-Description: Independent native system GPS simulation app for rootless iOS 16 and 17
+Description: Independent native system GPS simulation app for Rootless and RootHide on iOS 16 and 17
 Maintainer: Mohamedjj
 Author: Mohamedjj
 Section: Utilities
