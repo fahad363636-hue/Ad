@@ -91,7 +91,7 @@ def content_for(slug, name):
     first = re.sub(r"\s+", " ", first)
     if len(first) > 210:
         first = first[:207].rstrip() + "…"
-    if not shots or not text:
+    if not text or (not shots and slug not in ("chatgptguard-standalone", "chatgptguard-polyfills")):
         raise RuntimeError("No Sileo screenshots / description for " + slug)
     return first, "".join(text), "".join(shots), len(shots)
 
@@ -119,7 +119,7 @@ def replace(m):
             '</details></article>')
 
 page, n = pattern.subn(replace, page)
-assert n == 16, "Expected 16 tools; found " + str(n)
+assert n == 18, "Expected 18 tools; found " + str(n)
 style = """
 <style id="sileo-catalog-v1">
 .grid{align-items:start}.pkg-rich{display:block}.pkg-head{display:flex;gap:14px;align-items:start}

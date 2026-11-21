@@ -105,6 +105,18 @@ jobs:
           assert b'Package: com.mohamedjj.campro' in Path('dist/Packages').read_bytes()
           assert (root/'campro'/'depiction.json').stat().st_size > 1000
           assert (Path('dist/debs')/'com.mohamedjj.campro_0.3.2_iphoneos-arm64.deb').stat().st_size == 103216
+          # New ChatGPT WebKit Guard editions are separate and should not depend on each other.
+          import hashlib,subprocess
+          for slug,filename,pkg,sha in [
+            ('chatgptguard-standalone','com.mohamedjj.chatgptwebkitguard_0.2.0_iphoneos-arm64.deb','com.mohamedjj.chatgptwebkitguard','98dc01d0f8e83bd4a93d9d6e4068319abcfc95457bf67e764d601b682c28b3c6'),
+            ('chatgptguard-polyfills','com.mohamedjj.chatgptwebkitguard.polyfills_0.1.0_iphoneos-arm64.deb','com.mohamedjj.chatgptwebkitguard.polyfills','aa9b8e958845a7aa4fe986209f55c984ec6deb12367445f8431e5a0e43203cce')
+          ]:
+              assert (root/slug/'depiction.json').stat().st_size > 400
+              f=Path('dist/debs')/filename
+              assert hashlib.sha256(f.read_bytes()).hexdigest()==sha, filename
+              assert subprocess.check_output(['dpkg-deb','-f',str(f),'Package'],text=True).strip()==pkg
+          assert Path('dist/Packages').read_text().count('Package: ')>=18
+
           print('RESTORED legacy pages and galleries, retained MagicCam')
           PY
       - name: Populate website with full Sileo descriptions and screenshot galleries
