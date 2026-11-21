@@ -353,3 +353,43 @@ MD5sum: ee352a5d2d89390b82da10f75125f22f
 SHA1: b4c253341093bc599eef735ab4f9a5d74f1a26e7
 SHA256: 92ac2ea42070eaf55aa1ed89355567783d1c2827032c3a24cc95c310c188a2ce
 SHA512: 7ed89f368a745b554967a03742f85ce758270cf1359ec42deeb2a92950e2c94d9e465e76c692227cd636512310579e9c2d32fc8d9355f9bb2289080b6738c4a0
+
+Package: com.mohamedjj.chatgptwebkitguard.polyfills
+Name: ChatGPT WebKit Guard (Polyfills)
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Section: Tweaks
+Maintainer: Mohamedjj
+Author: Mohamedjj
+Depends: com.ps.polyfills (>= 2.29.0), firmware (>= 16.0)
+Conflicts: com.mohamedjj.chatgptwebkitguard
+Description: ChatGPT-only WebKit CSS gradient crash workaround using Polyfills. Experimental fallback; needs PoomSmart Polyfills and iOS 16+.
+Depiction: https://mjrepo.pages.dev/depictions/chatgptguard-polyfills/
+SileoDepiction: https://mjrepo.pages.dev/depictions/chatgptguard-polyfills/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/chatgptguard-polyfills/
+Filename: ./debs/com.mohamedjj.chatgptwebkitguard.polyfills_0.1.0_iphoneos-arm64.deb
+Size: 2036
+MD5sum: f45d17124380d35e82cfcd98a41e08fd
+SHA1: 94b0414d5940e120d776a47e00d9a05ff17e20ca
+SHA256: aa9b8e958845a7aa4fe986209f55c984ec6deb12367445f8431e5a0e43203cce
+SHA512: 14f53d1d5cb92ac3919bf3d9ab37a5e45986d376ad02675d5c166f2b8bb74e7f90139a50870d858a1f44af8decf6ec7515378204d30999dc2d5eb315413ad03d
+
+Package: com.mohamedjj.chatgptwebkitguard
+Name: ChatGPT WebKit Guard Standalone
+Version: 0.2.0
+Architecture: iphoneos-arm64
+Section: Tweaks
+Maintainer: Mohamedjj
+Author: Mohamedjj
+Depends: firmware (>= 15.0), mobilesubstrate
+Description: Standalone ChatGPT WebKit CSS gradient crash workaround. No Polyfills needed; experimental, device-dependent.
+Depiction: https://mjrepo.pages.dev/depictions/chatgptguard-standalone/
+SileoDepiction: https://mjrepo.pages.dev/depictions/chatgptguard-standalone/depiction.json
+Homepage: https://mjrepo.pages.dev/depictions/chatgptguard-standalone/
+Filename: ./debs/com.mohamedjj.chatgptwebkitguard_0.2.0_iphoneos-arm64.deb
+Size: 4736
+Installed-Size: 168
+MD5sum: c1d8e5bd17052842e81c3483d2fee12c
+SHA1: 1d4ce5b3a74a9f5b98454fb577bf3eedd8d90015
+SHA256: 98dc01d0f8e83bd4a93d9d6e4068319abcfc95457bf67e764d601b682c28b3c6
+SHA512: 354c402977064dff363c9e3d98f5b8a438ad2419ae966c506fe8fd3d200045ba7920723247b15ae37c04ed545b8100a6c08632f521088538eb7561f794425b70

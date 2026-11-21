@@ -1,0 +1,53 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tintColor": "#3266BD",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details / التفاصيل",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "ChatGPT WebKit Guard Standalone"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Standalone experimental workaround for ChatGPT CSS gradient WebKit crashes in Safari and Chrome. Requires a working Dopamine Rootless/ElleKit injection environment; no Polyfills or SafariX needed. Version 0.2.0 worked on one tested iPhone but not another; do not assume broad compatibility. No license required."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "العربية"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "حل مستقل وتجريبي لتعطل ChatGPT بسبب تدرجات CSS في WebKit داخل Safari وChrome. يعمل مع بيئة حقن Dopamine Rootless/ElleKit، ولا يحتاج Polyfills أو SafariX. نجح الإصدار 0.2.0 على آيفون في الاختبار ولم ينجح على آيفون آخر؛ التوافق غير مضمون. مجاني دون ترخيص."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version / الإصدار",
+          "text": "0.2.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Requirements / المتطلبات",
+          "text": "iOS 15+ Dopamine Rootless"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Dependency / الاعتماد",
+          "text": "ElleKit/mobilesubstrate (existing jailbreak)"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**Install only one edition / ثبّت إصدارًا واحدًا فقط.** If this version fails, uninstall it before trying the other. Results vary by device and iOS WebKit build. / إذا لم تعمل هذه النسخة، احذفها قبل تجربة النسخة الأخرى. تختلف النتائج من جهاز لآخر."
+        },
+        {
+          "class": "DepictionButtonView",
+          "text": "Support on Telegram / الدعم",
+          "action": "https://t.me/mohmo10s"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tintColor": "#3266BD",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details / التفاصيل",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "ChatGPT WebKit Guard (Polyfills)"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Experimental ChatGPT-only CSS gradient crash workaround for iOS 16 WebKit using PoomSmart Polyfills. For Safari and other compatible browsers. Requires Polyfills (>= 2.29.0); not a guaranteed fix on every iPhone. No license required."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "العربية"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "حل تجريبي لتعطّل ChatGPT بسبب تدرجات CSS في WebKit على iOS 16. يستخدم أداة Polyfills من PoomSmart، ويعمل في Safari والمتصفحات المتوافقة بحسب الجهاز. يتطلب Polyfills (2.29.0 أو أحدث). ليس مضمونًا على كل آيفون، وهو مجاني دون ترخيص."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version / الإصدار",
+          "text": "0.1.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Requirements / المتطلبات",
+          "text": "iOS 16+ Rootless"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Dependency / الاعتماد",
+          "text": "Polyfills >= 2.29.0"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**Install only one edition / ثبّت إصدارًا واحدًا فقط.** If this version fails, uninstall it before trying the other. Results vary by device and iOS WebKit build. / إذا لم تعمل هذه النسخة، احذفها قبل تجربة النسخة الأخرى. تختلف النتائج من جهاز لآخر."
+        },
+        {
+          "class": "DepictionButtonView",
+          "text": "Support on Telegram / الدعم",
+          "action": "https://t.me/mohmo10s"
+        }
+      ]
+    }
+  ]
+}
